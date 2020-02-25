@@ -1,0 +1,14 @@
+# top-most EditorConfig file
+root = true
+
+# Typescript files
+[*.ts]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
