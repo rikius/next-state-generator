@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require @babel/register ./src/**/*.spec.js",
-    "coverage": "rm -rf ./coverage && nyc --reporter=html --reporter=text mocha --require @babel/register ./src/**/*.js"
+    "coverage": "rm -rf ./coverage && nyc --reporter=html --reporter=text npm run test"
   },
   "dependencies": {},
   "keywords": [
