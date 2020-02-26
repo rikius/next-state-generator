@@ -1,0 +1,41 @@
+# OS files
+.DS_Store
+
+
+# IDE files
+/.idea
+/.editorconfig
+/*.iml
+
+
+# NPM files
+node_modules
+npm-debug.log
+npm-debug.log.*
+package-lock.json
+yarn-error.log
+yarn.lock
+.nyc_output
+.npmignore
+.npmrc
+.yarnrc
+
+
+# Others
+/build
+/tsconfig.*
+/tslint.json
+/webpack.config.js
+/.nycrc
+
+
+# Packed module files
+/*.tgz
+
+
+# Source files
+/src
+
+
+# Build output
+/coverage

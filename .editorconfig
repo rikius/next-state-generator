@@ -1,0 +1,20 @@
+# top-most EditorConfig file
+root = true
+
+# All file settings
+[*.!properties]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+# Typescript files
+[*.{js,ts,less,css}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true

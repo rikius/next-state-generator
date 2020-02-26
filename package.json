@@ -1,0 +1,21 @@
+{
+  "name": "state-generator",
+  "version": "1.0.0",
+  "description": "Generate next/previous state according current state",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register ./src/**/*.spec.js"
+  },
+  "dependencies": {},
+  "keywords": [
+    "javascript",
+    "starter"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  }
+}
