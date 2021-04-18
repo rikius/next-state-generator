@@ -1,22 +1,19 @@
 {
-  "name": "state-generator",
-  "version": "1.0.0",
-  "description": "Generate next/previous state according current state",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --coverage",
-    "coverage": "rm -rf ./coverage && nyc --reporter=html --reporter=text npm run test"
-  },
-  "dependencies": {},
-  "keywords": [
-    "javascript",
-    "starter"
-  ],
-  "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-typescript": "^7.10.4",
-    "babel-jest": "^26.1.0",
-    "jest": "^26.1.0"
-  }
+    "name": "state-generator",
+    "version": "1.0.0",
+    "description": "Generate next/previous state according current state",
+    "main": "state-generator.ts",
+    "scripts": {
+        "test": "jest --coverage",
+        "coverage": "rm -rf ./coverage && nyc --reporter=html --reporter=text npm run test"
+    },
+    "keywords": [
+        "javascript"
+    ],
+    "devDependencies": {
+        "@types/jest": "^26.0.22",
+        "jest": "^26.1.0",
+        "ts-jest": "^26.5.5",
+        "typescript": "^4.2.4"
+    }
 }
