@@ -1,6 +1,9 @@
 {
     "name": "state-generator",
     "version": "1.0.0",
+    "author": "rikius",
+    "license": "MIT",
+    "private": true,
     "description": "Generate next/previous state according current state",
     "main": "state-generator.ts",
     "scripts": {
