@@ -1,55 +1,41 @@
 const stateGenerator = (
     stateDefinition: (string | number)[],
     currentState: (string | number)[],
-    increaseState: number,
-    currentIndex = 0,
-    stateDefinitionSize = stateDefinition.length - 1,
-    output: number[] = []
+    increaseState: number
 ): number[] => {
-    if (currentIndex > stateDefinitionSize) {
-        return output;
+    const stateDefinitionSize = stateDefinition?.length;
+    const output: number[] = [];
+
+    for (let i = 0; i < stateDefinitionSize; i++) {
+        const maxValue = parseInt(stateDefinition[i]?.toString(), 10);
+        let singleItemState = parseInt(currentState[i]?.toString(), 10);
+
+        if (
+            isNaN(singleItemState) ||
+            singleItemState >= maxValue ||
+            singleItemState < 0
+        ) {
+            singleItemState = 0;
+        }
+
+        let nextState = singleItemState + increaseState;
+
+        if (nextState >= 0 && nextState < maxValue) {
+            increaseState = 0; // next state is not needed to increase/descrease
+        }
+
+        if (nextState >= maxValue || maxValue < 2) {
+            nextState = 0;
+        }
+
+        if (nextState < 0) {
+            nextState = maxValue - 1;
+        }
+
+        output.push(nextState);
     }
 
-    const maxValue = parseInt(stateDefinition[currentIndex].toString(), 10) || 0;
-    let singleItemState = parseInt(currentState[currentIndex].toString(), 10) || 0;
-
-    if (singleItemState >= maxValue || singleItemState < 0) {
-        singleItemState = 0;
-    }
-
-    if (!increaseState) {
-        return stateGenerator(
-            stateDefinition,
-            currentState,
-            increaseState,
-            currentIndex + 1,
-            stateDefinitionSize,
-            [...output, singleItemState]
-        );
-    }
-
-    let nextState = singleItemState + increaseState;
-
-    if (nextState >= 0 && nextState < maxValue) {
-        increaseState = 0; // next state is not needed to increase/descrease
-    }
-
-    if (nextState >= maxValue || maxValue < 2) {
-        nextState = 0;
-    }
-
-    if (nextState < 0) {
-        nextState = maxValue - 1;
-    }
-
-    return stateGenerator(
-        stateDefinition,
-        currentState,
-        increaseState,
-        currentIndex + 1,
-        stateDefinitionSize,
-        [...output, nextState]
-    );
+    return output;
 };
 
 export default stateGenerator;
